@@ -24,9 +24,7 @@ export class PokemonsComponent implements OnInit {
     private pokemonsService: PokemonsService
   ) { }
 
-  ngOnInit(): void {
-    console.log("asdas");
-    
+  ngOnInit(): void {   
     this.paginate();
   }
 
