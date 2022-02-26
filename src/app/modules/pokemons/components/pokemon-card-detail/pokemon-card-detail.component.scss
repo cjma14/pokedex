@@ -1,0 +1,189 @@
+.pokemons-details {
+    .pokemon-image {
+        width: 400px;
+    }
+
+    .sprite-pics {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 150px;
+        }
+    }
+
+    .pokemon-stats {
+        th {
+            padding: 0.25em 0.5em 0;
+        }
+        td {
+            padding: 0.25em 0.5em 0;
+        }
+    }
+
+    .wrapper-table {
+        margin-top: 50px;
+        display: flex;
+    }
+
+    .tag {
+        padding: 0.3rem 0.7rem;
+        font-size: 25px;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+    .card-pokemon-color {
+            &--normal {
+                background: #c08a53 !important;
+            &--type {
+                background-color: #c08a53;
+                color: white;
+                box-shadow: #000000;
+                }
+            }
+            &--water {
+                background: #1CB5E0 !important;
+                &--type {
+                background-color: #1CB5E0;
+                color: white;
+                box-shadow: #000000;
+                }  
+            }
+            &--electric {
+                background: rgba(255,222,0,1) !important; 
+                &--type {
+                background-color: rgba(255,222,0,1); ;
+                color: white;
+                box-shadow: #000000;
+                }
+            }
+            &--fire {
+                background: rgba(199,24,0,1) !important; 
+                &--type {
+                background-color: rgba(199,24,0,1); 
+                color: white;
+                box-shadow: #000000;
+                }
+            }
+            
+            &--psychic {
+                background: rgba(255,167,249,1) !important;
+                &--type {
+                background-color: rgba(255,167,249,1);
+                color: white;
+                box-shadow: #000000;
+                }
+            }
+            
+            &--dark {
+                background: rgba(25,25,25,1) !important;
+                &--type {
+                background-color: rgba(25,25,25,1);
+                color: white;
+                box-shadow: #000000;
+                }
+            }
+            &--grass {
+                background: rgba(196,218,61,1) !important;
+                &--type {
+                background-color: rgba(196,218,61,1);
+                color: #000000;
+                box-shadow: #000000;
+                }
+            }
+            
+            &--ice {
+                background: rgba(202,234,246,1) !important;
+                &--type {
+                background-color: rgba(202,234,246,1);
+                color: #000000;
+                box-shadow: #000000;
+                }
+            }
+            
+            &--fairy {
+                background: rgba(255,230,240,1) !important;
+                &--type {
+                background-color: rgba(255,230,240,1);
+                color: 000000;
+                box-shadow: #000000;
+                }
+            }
+
+            &--poison {
+                background: rgb(160, 8, 142) !important;
+                &--type {
+                background-color: rgb(160, 8, 142);
+                color: white;
+                box-shadow: #000000;
+                }
+            }
+
+            &--flying {
+                background: rgb(200, 240, 252) !important;
+                &--type {
+                background-color: rgb(200, 240, 252);
+                color: #000000;
+                box-shadow: #000000;
+                }
+            }
+        }
+
+        .pokemon-description {
+            margin-bottom: 50px;
+        }
+
+       
+}
+
+ .center-container {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.turn-back {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+    
+    .icon {
+        svg {
+            width: 30px;
+        }
+    }
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+@media (max-width: 900px) {
+  .center-container {
+      display: block;
+  }
+
+  .wrapper-table {
+      margin-top: 30px !important;
+      margin-bottom: 30px;
+      .pokemon-stats {
+          margin: auto;
+      }
+  }
+
+  .pokemon-description {
+    margin-bottom: 0;
+  }
+
+  .pokemon-image {
+    width: 340px !important;
+  }
+
+  .turn-back {
+    margin-bottom: 20px;  
+  }
+}

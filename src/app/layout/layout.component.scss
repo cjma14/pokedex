@@ -1,0 +1,55 @@
+ $primary : #fe3f47;
+ $color-text: white;
+
+ .bg-red-pokemon {
+    background-color: #fe3f47;
+ }
+
+ .icon {
+    height:  51px; 
+    width:  44px; 
+    display:  flex; 
+    svg {
+      height:  50px; 
+      width:  50px; 
+      margin:  auto;
+      transition:  all .3s ease;
+      fill: white; 
+      path {
+        transition:  all .3s ease; 
+      }
+    }
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+
+    .title {
+      margin-bottom: 0;
+      margin-left: 20px;
+      color:  white;
+      span {
+        color:  white;
+        font-weight:  700; 
+      }
+    }
+  }
+
+  .wrapper-item-list {
+     
+      .items-list {
+        list-style: none;
+        margin-bottom: 0;
+
+        .logout {
+            cursor: pointer;
+            svg{
+                fill: white;
+                width: 30px;
+                height: 30px;
+
+            }
+        }
+      }
+  }

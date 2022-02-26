@@ -1,0 +1,40 @@
+<div class="wrapper-card">
+    <div 
+        *ngIf="pokemon"
+        class="card-pokemon" 
+        [routerLink]="['/pokemons/', pokemon.id]">
+       
+        <div class="face face1" [class]="'cursor-pointer card-pokemon-color--' + typeFirst">
+            <div class="content">
+                <div class="card-pokemon_image-container flex justify-center">
+                    <img class="bg-card-pokemon" src="../../../../../assets/img/pokeball-background.png" alt="">
+                    <img [src]="profilePic" [alt]="pokemon.name" class="card-pokemon-image">
+                    
+                </div>
+            </div>
+            <h3 class="name-pokemon">
+                {{ pokemon.name }}
+            </h3>
+        </div>
+        <div class="face face2">
+            <div class="content">
+                <div class="mb-2 text-center">
+                    <span *ngFor="let pType of pokemon.types"
+                        [class]="'tag uppercase mr-1 card-pokemon-color--' + pType.type.name + '--type'">
+                        {{ pType.type.name }}
+                    </span>
+                </div>
+                <div class="card-pokemon-abilities">
+                    <h4 class="card-pokemon-ability">
+                        <span class="card-pokemon-label">Habilidad</span>
+                        {{ ability }}
+                    </h4>
+                    <h4 class="card-pokemon-ability">
+                        <span class="card-pokemon-label">Habilidad oculta</span>
+                        {{ abilityHidden }}
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

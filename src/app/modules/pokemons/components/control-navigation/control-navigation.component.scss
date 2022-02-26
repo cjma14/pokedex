@@ -1,0 +1,17 @@
+.list-navegation {
+    display: flex;
+    list-style: none;
+
+    a {
+        text-decoration: none;
+        color: #5d77ae;
+    }
+
+    li {
+        margin: 0 10px;
+    }
+
+    li:hover a {
+        color: #80a4f0;
+    }
+}

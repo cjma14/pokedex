@@ -1,10 +1,11 @@
-
-import { routing } from './app.routing';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { AuthModule } from './modules/auth/auth.module';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -12,8 +13,10 @@ import { AuthModule } from './modules/auth/auth.module';
   ],
   imports: [
     BrowserModule,
-    routing, 
-    AuthModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    AppRoutingModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

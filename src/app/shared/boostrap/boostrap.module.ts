@@ -4,18 +4,25 @@ import { CommonModule } from '@angular/common';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { AlertModule } from 'ngx-bootstrap/alert';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    AlertModule.forRoot(),
+    PaginationModule.forRoot()
   ],
-  exports: [BsDropdownModule, TooltipModule, ModalModule],
+  exports: [
+    BsDropdownModule, 
+    TooltipModule, 
+    ModalModule, 
+    AlertModule, 
+    PaginationModule
+  ],
 })
 export class BoostrapModule { }

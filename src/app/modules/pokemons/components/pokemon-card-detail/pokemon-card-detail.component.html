@@ -1,0 +1,85 @@
+
+<div class="turn-back" [routerLink]="['/pokemons']" >
+    <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+                d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z" />
+        </svg>
+    </div>
+    <h4>Volver al menu pokedex</h4>
+</div>
+<div class="container center-container">
+   
+    <div class="wrapper-pokemon-details">
+        <div class="pokemons-details">
+            <div class="row">
+                <div class="col-md-6 col-xs-12 text-center">
+                    <div class="wrapper-image-pokemon">
+                        <img [src]="profilePic" [alt]="pokemon.name" class="pokemon-image">
+                    </div>
+                    <div class="mb-2 text-center mt-50">
+                        <span *ngFor="let pType of pokemon.types"
+                            [class]="'tag uppercase mr-1 card-pokemon-color--' + pType.type.name + '--type'">
+                            {{ pType.type.name }}
+                        </span>
+                    </div>
+                    
+                    
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <h1 class="pokemons-name">
+                        {{ pokemon.name }}
+                    </h1>
+                    <p class="m-1-25 w-96 pokemon-description">
+                        {{ pokemon.description }}
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12">
+                            <h3>Estadisticas</h3>
+                            <div class="wrapper-table">
+                                <table class="pokemon-stats">
+                                    <tbody>
+                                        <tr *ngFor="let stats of pokemon.stats">
+                                            <th>{{ stats.stat.name }}</th>
+                                            <td>{{ stats.base_stat }}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12">
+                            <h3>Capturas del Juego</h3>
+                            <div class="sprite-pics">
+                                <img [src]="pokemon.sprites.front_default" alt="front">
+                                <img [src]="pokemon.sprites.front_shiny" alt="front">
+                                <img [src]="pokemon.sprites.back_default" alt="back">
+                                <img [src]="pokemon.sprites.back_shiny" alt="back">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-pokemon-abilities mt-50">
+                        <div class="row">
+                            <div class="col-md-6 col-xs-12 text-center">
+                                <h4 class="card-pokemon-ability">
+                                    <span class="card-pokemon-label">Habilidad</span><br>
+                                    {{ ability }}
+                                </h4>
+                            </div>
+                            <div class="col-md-6 col-xs-12 text-center">
+                                <h4 class="card-pokemon-ability">
+                                    <span class="card-pokemon-label">Habilidad oculta</span><br>
+                                    {{ abilityHidden }}
+                                </h4>
+                            </div>
+                        </div>
+                       
+                       
+                    </div>
+                   
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
